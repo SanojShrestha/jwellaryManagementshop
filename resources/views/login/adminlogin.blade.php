@@ -19,7 +19,6 @@
 
 </div>
 @endif
-
 @if (count($errors) > 0)
     <div class="alert alert-danger">
         <ul>
@@ -34,9 +33,9 @@
     <form role="form" action="{{ url('checkvalidate') }}"method="post">
     {!! csrf_field()!!}
         <p>username:</p>
-        <input type="text" class="form-control" name="username" >
+        <input type="text" class="form-control" name="username" value="{{ old('username') }}" >
         <p>password:</p>
-        <input type="password" class="form-control" name="password" ><br>
+        <input type="password" class="form-control" name="password" value=""><br>
         <button type="submit" class="btn btn-default"> Login</button>
     </form>
    </div>

@@ -1,36 +1,42 @@
 @extends('Dashboard/layouts/dashboarlayout')
 @section('title')category/all @stop
 @section('contents')
-<h2>all cateroy is listed here/ &nbsp; &nbsp; &nbsp; <a href="{{  url('category/create')  }}">add  new Category</a></h2>
+<h2>all product is listed here/ &nbsp; &nbsp; &nbsp; <a href="{{  url('product/create')  }}">add  new product</a></h2>
 <hr>
 @if(Session::has('success'))
 <div class="alert alert-success ">
   <h4>{{ Session::get('success') }}</h4>
 </div>
 @endif
-@if(count($categorylist) > 0)
+@if(count($productList) > 0)
 <table class="table table-hover table-bordered">
 	<thead>
 		<th>s.n</th>
-		<th>category_name</th>
-		<th>category_description</th>
-		<th>created_at</th>
-		<th>update_at</th>
+		<th>product name</th>
+		<th>product quantity</th>
+		<th>product weight</th>
+		<th>product_note</th>
+		<th>category id</th>
+		<th>created at</th>
+		<th>update at</th>
 		<th>action</th>
 	</thead>
 	<tbody>
 		<?php   $i=1; ?>
-		@foreach($categorylist as $category)
+		@foreach($productList as $product)
 		<tr>
 			<td> {{ $i++}}</td>
-			<td> {{  $category->category_name  }} </td>
-			<td> {{  $category->catgory_description}} </td>
-			<td> {{  $category->created_at}} </td>
-			<td> {{  $category->updated_at }} </td>
+			<td> {{  $product->product_name  }} </td>
+			<td> {{  $product->product_quantity }} </td>
+			<td> {{  $product->product_weight }} </td>
+			<td> {{  $product->product_note }} </td>
+			<td> {{  $product->category_id }} </td>
+			<td> {{  $product->created_at }} </td>
+			<td> {{  $product->updated_at }} </td>
 			<td width="220">
-				<a href="category/{{$category->id }}/edit"><button type="button" class="btn btn-primary">edit</button></a>
+				<a href="product/{{$product->id }}/edit"><button type="button" class="btn btn-primary">edit</button></a>
 				<a style="display:inline-block;">
-					<form  method="post" action="category/{{ $category->id }}">
+					<form  method="post" action="product/{{ $product->id }}">
 						{!! csrf_field()!!}
 						{!! method_field('delete')!!}
 						<input type="submit" value="delete" class="btn btn-danger delete">
@@ -59,5 +65,5 @@
 	    });
      });
 </script>
-{!! $categorylist->render() !!}
+{!! $productList->render() !!}
 @stop
