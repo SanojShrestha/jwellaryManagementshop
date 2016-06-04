@@ -20,7 +20,7 @@
 <body>
   <!-- this section goes for navbar -->
   <section>
-    <nav class="navbar navbar-inverse navbar-static-top">
+    <nav class="navbar  navbar-static-top" style="background-color:#263238;">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -28,7 +28,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>                        
           </button>
-          <a class="navbar-brand" href="#">WebSiteName</a>
+          <a class="navbar-brand" href="{{asset('/dashboard/dashboard')}}">WebSiteName</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
@@ -52,7 +52,7 @@
              <!-- for dashaborrd -->
              <li class="mainMenuItem dashboard" > 
               <a href="#"><i class="fa fa-tachometer"></i> &nbsp;
-               Products</a>
+                PRODUCTS </a>
                <ul class="subMenu " >                            
                <li><a href="{{url('product') }} ">view  products</a></li>
                <li><a href="{{  url('product/create')  }}">add products</a></li>
@@ -61,7 +61,7 @@
              <!-- for events and news -->
              <li class="mainMenuItem events">
               <a href="#"><i class="fa fa-newspaper-o"></i>&nbsp;
-               categories</a>
+               CATEGORIES </a>
                <ul class="subMenu">
                 <li><a href="{{url('category') }} ">view  Category</a></li>
                <li><a href="{{  url('category/create')  }}">add Category</a></li>
@@ -69,8 +69,10 @@
              </li>
              <!-- for posta -->
              <li class="mainMenuItem posts">
-              <a href="#"><i class="fa fa-folder-o"></i> &nbsp; Posts</a>
+              <a href="#"><i class="fa fa-folder-o"></i> &nbsp;CUSTOMERS</a>
               <ul class="subMenu">
+               <li><a href="{{url('customer') }} ">view  Customer</a></li>
+               <li><a href="{{  url('customer/create')  }}">add Customer</a></li>
               </ul>
             </li>
             <!-- for pages -->

@@ -52,50 +52,67 @@ class productsController extends Controller
        if($moveFirstImage && $moveSecondImage)
        {
        $product->save();
-       Session::flash("success","one category addeed succssfully");
+       Session::flash("success","one product addeed succssfully");
       return redirect('product');
        }
      else {
-        Session::flash("failled","one category addeed succssfully");
+        Session::flash("failled","problem occur while uploading file plz try later");
         return back();
      }
     
    }
    public function show($id)
    {
-        //
+          $product=new product();
+          $singleProduct=$product->find($id);
+        return view('Dashboard/product/viewSingleProduct')->with('singleProduct',$singleProduct);
    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
-    {
-        echo "this is edit page ";
+    {    $category=new Category();
+        $categoryList=$category::all();
+        $product=new product();
+        $editProduct=$product->find($id);
+      return view('Dashboard/product/editProduct')->with('editProduct',$editProduct)->with('categoryList',$categoryList);
 
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+           'product_name'=>'required|alpha',
+           'product_quantity'=>'required|Integer',
+           'product_weight'=>'required|Numeric',
+           'product_firstImage'=>'required|mimes:jpeg,jpg,png',
+           'product_secondImage'=>'required|mimes:jpeg,jpg,png',
+           'product_note' =>'required',
+           'category_id' =>'required|Integer']);
+       $products=new product();
+       $product=$products::find($id);
+       $product->product_name=$request->product_name;
+       $product->product_quantity=$request->product_quantity;
+       $product->product_weight=$request->product_weight;
+       $firstImage=$request->file('product_firstImage');
+       $product->product_firstImage=$firstImage->getClientOriginalName();
+       $secondImage=$request->file('product_secondImage');
+       $product->product_secondImage=$secondImage->getClientOriginalName();
+       $product->product_note=$request->product_note;
+       $product->category_id=$request->category_id;
+       $upload_directory=public_path().'/uploads/product_images';
+       $moveFirstImage=$firstImage->move($upload_directory,$firstImage->getClientOriginalName());
+       $moveSecondImage=$secondImage->move($upload_directory,$secondImage->getClientOriginalName());
+       if($moveFirstImage && $moveSecondImage)
+       {
+       $product->save();
+       Session::flash("success"," product modified succssfully");
+      return redirect('product');
+       }
+     else {
+        Session::flash("failled","problem occur while uploading file plz try later");
+        return back();
+     }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     { 
       $product=new product();

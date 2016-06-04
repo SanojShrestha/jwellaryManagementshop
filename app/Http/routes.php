@@ -11,12 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','homeController@index');
+Route::get('forgotPassword','loginController@forgotPassword');
 Route::get('adminlogin','loginController@index');
 Route::get('adminlogout','loginController@logout');
 Route::post('checkvalidate','loginController@checkvalidate');
 Route::get('dashboard/dashboard','loginController@dashboard');
 Route::resource('category','categoryController');
 Route::resource('product','productsController');
+Route::resource('customer','customerController');

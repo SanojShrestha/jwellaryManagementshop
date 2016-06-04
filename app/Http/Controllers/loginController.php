@@ -46,4 +46,9 @@ class loginController extends Controller
     $request->session()->flush();
     return redirect('adminlogin');
   }
+  public function forgotPassword()
+  {
+
+    return "this is for forgot password recovery systems function";
+  }
 }

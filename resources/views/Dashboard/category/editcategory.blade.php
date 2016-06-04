@@ -27,7 +27,7 @@ category/all
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <input type="submit" class="btn btn-primary btn-lg">Submit</button>
+      <button type="submit" class="btn btn-primary btn-block btn-lg">Submit</button>
     </div>
   </div>
 </form>
