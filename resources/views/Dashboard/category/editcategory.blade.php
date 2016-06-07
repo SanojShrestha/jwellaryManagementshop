@@ -22,7 +22,7 @@ category/all
   <div class="form-group">
     <label class="control-label col-sm-2" for="pwd">category description :</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="pwd"  name="category_description" value=" {{ $category->catgory_description }}" >
+      <input type="text" class="form-control" id="pwd"  name="category_description" value="{{ $category->catgory_description }}" >
     </div>
   </div>
   <div class="form-group">

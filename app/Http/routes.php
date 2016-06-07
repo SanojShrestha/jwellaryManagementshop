@@ -12,6 +12,11 @@
 */
 
 Route::get('/','homeController@index');
+Route::get('about','homeController@about');
+Route::get('contact','homeController@contact');
+Route::get('showProducts','homeController@showProducts');
+Route::get('register','homeController@register');
+Route::get('single','homeController@single');
 Route::get('forgotPassword','loginController@forgotPassword');
 Route::get('adminlogin','loginController@index');
 Route::get('adminlogout','loginController@logout');

@@ -45,7 +45,7 @@ class customerController extends Controller
 		if($moveImage)
 		{
 			$customer->save();
-			Session::flash("success","one product addeed succssfully");
+			Session::flash("success","one customer addeed succssfully");
 			return redirect('customer');
 		}
 		else {
@@ -94,7 +94,7 @@ class customerController extends Controller
 		if($moveImage)
 		{
 			$customer->save();
-			Session::flash("success","product modified succssfully");
+			Session::flash("success","customer modified succssfully");
 			return redirect('customer');
 		}
 		else {
