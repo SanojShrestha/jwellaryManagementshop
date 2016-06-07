@@ -12,7 +12,7 @@
 <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
 <link href="{{asset('site/css/memenu.css')}}" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="js/memenu.js')}}"></script>
+<script type="text/javascript" src="{{asset('site/js/memenu.js')}}"></script>
 <script>$(document).ready(function(){$(".memenu").memenu();});</script>
 <script src="{{asset('site/js/simpleCart.min.js')}}"> </script>
 </head>
@@ -38,7 +38,7 @@
 						<a href="checkout.html">
 						<h3> <div class="total">
 							<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
-							<img src="{{asset('images/cart.png') }}" alt=""/></h3>
+							<img src="{{asset('site/images/cart.png') }}" alt=""/></h3>
 						</a>
 						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
 
