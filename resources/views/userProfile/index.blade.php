@@ -20,25 +20,48 @@
 <body>
   <!-- this section goes for navbar -->
   <section>
-    <nav class="navbar  navbar-static-top" style="background-color:#263238;">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>                        
-          </button>
-          <a class="navbar-brand" href="{{asset('/dashboard/dashboard')}}">Sangam Jwellary shop</a>
+     <nav class="navbar  navbar-static-top" style="background:#263238;">
+        <div class="container">
+            <div class="navbar-header">
+
+                <!-- Collapsed Hamburger -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- Branding Image -->
+                <a class="navbar-brand" href="{{ url('/') }}">
+                 welcome to UserProfile section
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <!-- Left Side Of Navbar -->
+               
+
+                <!-- Right Side Of Navbar -->
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Authentication Links -->
+                    @if (Auth::guest())
+                        <li><a href="{{ url('/login') }}">Login</a></li>
+                        <li><a href="{{ url('/register') }}">Register</a></li>
+                    @else
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                            </ul>
+                        </li>
+                    @endif
+                </ul>
+            </div>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="{{ asset('/') }}">view Site</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="{{asset('adminlogout')}}"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-          </ul>
-        </div>
-      </div>
     </nav>
   </section>
   <!-- navbar section ends  -->
@@ -52,7 +75,7 @@
              <!-- for dashaborrd -->
              <li class="mainMenuItem dashboard" > 
               <a href="#"><i class="fa fa-tachometer"></i> &nbsp;
-                products</a>
+               your orders </a>
                <ul class="subMenu " >                            
                <li><a href="{{url('product') }} ">view  products</a></li>
                <li><a href="{{  url('product/create')  }}">add products</a></li>
@@ -61,38 +84,13 @@
              <!-- for events and news -->
              <li class="mainMenuItem events">
               <a href="#"><i class="fa fa-newspaper-o"></i>&nbsp;
-               categories</a>
+              update profile</a>
                <ul class="subMenu">
                 <li><a href="{{url('category') }} ">view  Category</a></li>
                <li><a href="{{  url('category/create')  }}">add Category</a></li>
                </ul>
              </li>
              <!-- for posta -->
-             <li class="mainMenuItem posts">
-              <a href="#"><i class="fa fa-folder-o"></i> &nbsp;customers</a>
-              <ul class="subMenu">
-               <li><a href="{{url('customer') }} ">view  Customer</a></li>
-               <li><a href="{{  url('customer/create')  }}">add Customer</a></li>
-              </ul>
-            </li>
-            <!-- for pages -->
-            <li class="mainMenuItem pages">
-              <a href="#"> <i class="fa fa-file-o"></i> &nbsp;
-               Orders</a>
-               <ul class="subMenu">
-                <li><a href="{{url('customer') }} ">view Orders</a></li>
-               </ul>
-             </li>
-             <!-- for users -->
-             <li class="mainMenuItem users">
-              <a href="#"><i class="fa fa-users"></i>&nbsp;
-               site Setting</a>
-               <ul class="subMenu">
-                 <li><a href="{{url('customer') }} ">view Orders</a></li>
-                   <li><a href="{{url('customer') }} ">view Orders</a></li>
-                     <li><a href="{{url('customer') }} ">view Orders</a></li>
-               </ul>
-             </li>
             
           </ul>
         </div>
@@ -102,7 +100,9 @@
     <!-- this section for rightside -->
     <div class=" col-md-10 col-sm-9 col-lg-10 col-xs-8 rightside">
       <section style="padding:20px">
-       @yield('contents')
+
+     <h1>welcome {{ Auth::user()->name }}</h1>
+
       </section>
     </div>
   </div>

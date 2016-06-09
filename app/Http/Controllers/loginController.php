@@ -11,7 +11,10 @@ class loginController extends Controller
   public function index(Request $request)
   {
     $value = $request->session()->get('admin_log');
-    if(isset($value)) { return view('Dashboard.dashboard');}
+    if(isset($value)) 
+    { 
+            return redirect('dashboard/dashboard');
+    }
     return view('login/adminlogin');
   }
 
@@ -36,9 +39,17 @@ class loginController extends Controller
      }
   }
 
-  public function dashboard() 
+  public function dashboard(Request $request) 
   {
-    return view('Dashboard.dashboard');
+     $value = $request->session()->get('admin_log');
+    if(isset($value)) { 
+      return view('Dashboard.dashboard');
+    }
+    else {
+      return redirect('adminlogin');
+
+    }
+
   }
 
   public function logout(Request $request)

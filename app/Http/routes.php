@@ -10,8 +10,8 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
 Route::get('/','homeController@index');
+Route::get('userProfile','userProfileController@index');
 Route::get('about','homeController@about');
 Route::get('contact','homeController@contact');
 Route::get('showProducts','homeController@showProducts');
@@ -25,3 +25,5 @@ Route::get('dashboard/dashboard','loginController@dashboard');
 Route::resource('category','categoryController');
 Route::resource('product','productsController');
 Route::resource('customer','customerController');
+Route::auth();
+Route::get('/home', 'HomeController@index');

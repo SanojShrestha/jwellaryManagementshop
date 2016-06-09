@@ -142,15 +142,7 @@ input.ng-invalid.ng-dirty{
 </style>
 
 <div class="container" >
-  @if (count($errors) > 0)
-  <div class="alert alert-danger">
-    <ul>
-      @foreach ($errors->all() as $error)
-      <li>{{ $error }}</li>
-      @endforeach
-    </ul>
-  </div>
-  @endif
+  
   <div class="container" ng-app="login" ng-controller="loginCtrl">
     <div class="modal-dialog  col-md-12 col-sm-12 col-xs-12 ">
       <!-- modal content -->
@@ -166,6 +158,16 @@ input.ng-invalid.ng-dirty{
   <div class="alert alert-danger ">
     <p style="font-size:16px;">{{ Session::get('failled') }}</p>
 
+  </div>
+  @endif
+  @if (count($errors) > 0)
+  <div class="alert alert-info">
+    <ul>
+      @foreach ($errors->all() as $error)
+      {{ $error }}
+      <br>
+      @endforeach
+    </ul>
   </div>
   @endif
          <form role="form" action="{{ url('checkvalidate') }}"method="post" novalidate>

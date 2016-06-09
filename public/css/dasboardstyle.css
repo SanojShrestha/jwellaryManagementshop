@@ -3,7 +3,7 @@ table{
   
 }
 body{
-  background-color:#263238;
+
 
 
 }
@@ -11,8 +11,7 @@ body{
 
   position: relative;
   top:-20px;
-  background-color:#263238;
-  color:#fff;
+  background-color:#fff;
   height:100%;
   overflow:auto;
 
@@ -21,7 +20,7 @@ body{
 
   position: relative;
   top:-20px;
-  background-color: #263238;
+  background-color:#263238;
   height:100%;
   overflow:auto;
   color:#fff;
