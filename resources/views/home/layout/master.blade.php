@@ -58,9 +58,14 @@
 				</div>
 		  <div class=" h_menu4">
 				<ul class="memenu skyblue">
-					  <li class="active grid"><a class="color6" href="index.html">Home</a></li>	
-				<li><a class="color6"href="blog.html">Blog</a></li>				
-				<li><a class="color6" href="contact.html">Conact</a></li>
+			  <li class="active grid"><a class="color6" href="{{ url('/') }}">Home</a></li>				
+					<li><a class="color6" href="{{ url('/contact') }}">new Items</a></li>
+					<li><a class="color6" href="{{ url('/contact') }}">category</a></li>
+					<li><a class="color6" href="{{ url('/contact') }}">Conact</a></li>
+					<li><a class="color6" href="{{ url('/contact') }}">services</a></li>
+					<li><a class="color6" href="{{ url('/contact') }}">about us</a></li>
+
+
    
                     @if (Auth::guest())
                         <li><a class="color6" href="{{ url('/login') }}">Login</a></li>
@@ -73,12 +78,11 @@
    
 			  </ul> 
 			</div>
-				
-				<div class="clearfix"> </div>
+			
 		</div>
 		</div>
-
 	</div>
+
 	<!--*************************NavBAR SECTION ENDS ************************************ -->
    <!--************************ tHIS IS FOR BANNER TEXT IN SLIDER ************************************************* -->
 
