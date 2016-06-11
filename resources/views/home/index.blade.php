@@ -1,7 +1,7 @@
 @extends('home/layout/master')
 @section('content')
 
-<div class="banner">
+{{-- <div class="banner">
 		<div class="container">
 		
 
@@ -22,7 +22,7 @@
 		</div>
 
 	</div>
-	</div>
+	</div> --}}
 	<!-- *********************************** BANNER TEXT ENDS HERERE *******************-->
 
 <!--***************************************CONTENT SECTION GOES HERE ***********************************************-->
@@ -31,85 +31,27 @@
 	<div class="content-top">
 		<h1>NEW RELEASED</h1>
 		<div class="grid-in">
-			<div class="col-md-4 grid-top">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{{ asset('site/images/pi.jpg') }}" alt="">
+		 @foreach($productList as $product)
+			<div class="col-md-4 grid-top" style="padding:30px;
+    text-align: center;">
+				<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img  class="img-responsive" src="{{ asset('uploads/product_images')."/".$product->product_firstImage }}" style="height:350px" alt="">
 							<div class="b-wrapper">
 									<h3 class="b-animate b-from-left    b-delay03 ">
-										<span>T-Shirt</span>	
+										<span>{{ $product->product_name}} </span>	
 									</h3>
 								</div>
 				</a>
 		
 
-			<p><a href="single.html">Contrary to popular</a></p>
+			<p><a href="/">{{ $product->product_note }}</a></p>
 			</div>
-			<div class="col-md-4 grid-top">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{{asset('site/images/pi1.jpg') }}" alt="">
-					<div class="b-wrapper">
-									<h3 class="b-animate b-from-left    b-delay03 ">
-										<span>Shoe</span>	
-									</h3>
-								</div>
-				</a>
-			<p><a href="single.html">classical Latin</a></p>
-			</div>
-			<div class="col-md-4 grid-top">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{{asset('site/images/pi2.jpg') }}" alt="">
-					<div class="b-wrapper">
-									<h3 class="b-animate b-from-left    b-delay03 ">
-										<span>Bag</span>	
-									</h3>
-								</div>
-				</a>
-			<p><a href="single.html">undoubtable</a></p>
-			</div>
+		
+		      @endforeach
 					<div class="clearfix"> </div>
 		</div>
-		<div class="grid-in">
-			<div class="col-md-4 grid-top">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{{asset('site/images/pi3.jpg') }}" alt="">
-					<div class="b-wrapper">
-									<h3 class="b-animate b-from-left    b-delay03 ">
-										<span>Shirt</span>	
-									</h3>
-								</div>
-				</a>
-			<p><a href="single.html">suffered alteration</a></p>
-			</div>
-			<div class="col-md-4 grid-top">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{{asset('site/images/pi4.jpg') }} " alt="">
-					<div class="b-wrapper">
-									<h3 class="b-animate b-from-left    b-delay03 ">
-										<span>Bag</span>	
-									</h3>
-								</div>
-				</a>
-			<p><a href="single.html">Content here</a></p>
-			</div>
-			<div class="col-md-4 grid-top">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="{{asset('site/images/pi5.jpg') }}" alt="">
-					<div class="b-wrapper">
-									<h3 class="b-animate b-from-left    b-delay03 ">
-										<span>Shoe</span>	
-									</h3>
-								</div>
-				</a>
-			<p><a href="single.html">readable content</a></p>
-			</div>
-					<div class="clearfix"> </div>
-		</div>
+	
 	</div>
-	<div class="content-bottom">
-		<ul>
-			<li><a href="#"><img class="img-responsive" src="{{asset('site/images/lo.png') }}" alt=""></a></li>
-			<li><a href="#"><img class="img-responsive" src="{{asset('site/images/lo1.png') }}" alt=""></a></li>
-			<li><a href="#"><img class="img-responsive" src="{{asset('site/images/lo2.png') }}" alt=""></a></li>
-			<li><a href="#"><img class="img-responsive" src="{{asset('site/images/lo3.png') }}" alt=""></a></li>
-			<li><a href="#"><img class="img-responsive" src="{{asset('site/images/lo4.png') }}" alt=""></a></li>
-			<li><a href="#"><img class="img-responsive" src="{{asset('site/images/lo5.png') }}" alt=""></a></li>
-		<div class="clearfix"> </div>
-		</ul>
-	</div>
+
 </div>
 
 @stop

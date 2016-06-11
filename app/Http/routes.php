@@ -11,7 +11,10 @@
 |
 */
 Route::get('/','homeController@index');
-Route::get('userProfile','userProfileController@index');
+// Route::get('userProfile/viewOrders','userProfileController@viewOrders');
+Route::get('userProfile/changePassword/{id}','userProfileController@changePassword');
+Route::Post('userProfile/updatePassword/{id}','userProfileController@updatePassword');
+Route::resource('userProfile','userProfileController');
 Route::get('about','homeController@about');
 Route::get('contact','homeController@contact');
 Route::get('showProducts','homeController@showProducts');
@@ -24,6 +27,6 @@ Route::post('checkvalidate','loginController@checkvalidate');
 Route::get('dashboard/dashboard','loginController@dashboard');
 Route::resource('category','categoryController');
 Route::resource('product','productsController');
-Route::resource('customer','customerController');
+Route::resource('user','customerController');
 Route::auth();
 Route::get('/home', 'HomeController@index');

@@ -67,15 +67,29 @@
                <li><a href="{{  url('category/create')  }}">add Category</a></li>
                </ul>
              </li>
-             <!-- for posta -->
+           {{--   <!-- for posta -->
              <li class="mainMenuItem posts">
               <a href="#"><i class="fa fa-folder-o"></i> &nbsp;customers</a>
               <ul class="subMenu">
                <li><a href="{{url('customer') }} ">view  Customer</a></li>
                <li><a href="{{  url('customer/create')  }}">add Customer</a></li>
               </ul>
-            </li>
+            </li> --}}
             <!-- for pages -->
+             <li class="mainMenuItem pages">
+              <a href="#"> <i class="fa fa-file-o"></i> &nbsp;
+               users</a>
+               <ul class="subMenu">
+                <li><a href="{{url('user') }} ">view users</a></li>
+               </ul>
+             </li>
+            <li class="mainMenuItem pages">
+              <a href="#"> <i class="fa fa-file-o"></i> &nbsp;
+               Orders</a>
+               <ul class="subMenu">
+                <li><a href="{{url('customer') }} ">view Orders</a></li>
+               </ul>
+             </li>
             <li class="mainMenuItem pages">
               <a href="#"> <i class="fa fa-file-o"></i> &nbsp;
                Orders</a>

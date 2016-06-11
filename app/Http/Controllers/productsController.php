@@ -118,7 +118,7 @@ class productsController extends Controller
       $product=new product();
       $DeleteProduct=$product::find($id);
       $DeleteProduct->delete();
-      Session::flash("success","one product delted succssfully");
+      Session::flash("success","one product deleted succssfully");
       return redirect('product');
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\customer;
+use App\User;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Session;
 
@@ -12,9 +13,12 @@ class customerController extends Controller
 
 	public function index()
 	{
-		$customer=new customer();  
-		$customerList=$customer::paginate(5);
-		return view('Dashboard/customer/viewCustomer')->with('customerList',$customerList);
+		// $customer=new customer();  
+		// $customerList=$customer::paginate(5);
+		// return view('Dashboard/customer/viewCustomer')->with('customerList',$customerList);
+		$user=new User();
+		$userList=$user::paginate(8);
+		return view('Dashboard/user/viewUser',compact('userList'));
 	}
 
 	public function create()
@@ -105,10 +109,10 @@ class customerController extends Controller
 
 	public function destroy($id)
 	{
-		$customer=new customer();
-		$DeleteCustomer=$customer::find($id);
-		$DeleteCustomer->delete();
-		Session::flash("success","one customer delted succssfully");
-		return redirect('customer');
+		$user=new user();
+		$DeleteUser=$user::find($id);
+		$DeleteUser->delete();
+		Session::flash("success","one user delted succssfully");
+		return redirect('user');
 	}
 }

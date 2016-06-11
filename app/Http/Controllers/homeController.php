@@ -5,12 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\product;
 
 class homeController extends Controller
 {
+
     public function index()
     {
-     return view('home/index');
+    $product=new product();
+    $productList=$product::all();
+    
+     return view('home/index',compact('productList'));
     }
 
     public function about(){

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>New Store A Ecommerce Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
+<title>Sangam jwellary shop</title>
 <link href="{{asset('site/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
 <script src="{{asset('site/js/jquery.min.js')}}"></script>
 <link href="{{asset('site/css/style.css')}}" rel="stylesheet" type="text/css" media="all" />	
@@ -22,19 +22,18 @@
 <!-- *********************************THIS SECTION FOR TOP HEADER STYLING ***********************************8 -->
 	<div class="header-top">
 		<div class="container">
-			<div class="search">
-					<form>
+	
+				 <form>
 						<input type="text" value="Search " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
 						<input type="submit" value="Go">
-					</form>
-			</div>
+					</form> 
+			<h2 style=" color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">welcome to sangam jwellary shop</h2>
+		
 			<div class="header-left">		
 					<ul>
-						<li ><a href="login.html"  >Login</a></li>
-						<li><a  href="register.html"  >Register</a></li>
-
+						
 					</ul>
-					<div class="cart box_1">
+					<div class="cart box_1" style="margin-top:-20px;padding-top:-20px;">
 						<a href="checkout.html">
 						<h3> <div class="total">
 							<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>

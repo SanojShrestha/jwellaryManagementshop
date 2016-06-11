@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use Validator;
+use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -52,6 +53,9 @@ class AuthController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
+            'phone_number' =>'required',
+            'address' =>'required',
+
         ]);
     }
 
@@ -62,10 +66,12 @@ class AuthController extends Controller
      * @return User
      */
     protected function create(array $data)
-    {
+    { 
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'phone_number'=>$data['phone_number'],
+            'address' =>$data['address'],
             'password' => bcrypt($data['password']),
         ]);
     }

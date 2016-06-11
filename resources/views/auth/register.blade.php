@@ -9,7 +9,7 @@
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
-
+                        {{-- **************************NAME***********************8 --}}
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Name</label>
 
@@ -23,7 +23,7 @@
                                 @endif
                             </div>
                         </div>
-
+                     {{-- ******************************EMAIL*********************8 --}}
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
@@ -37,7 +37,35 @@
                                 @endif
                             </div>
                         </div>
+                        {{-- ***********************PHONE NUMBER *************************8 --}}
+                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="email" class="col-md-4 control-label">phone Number</label>
 
+                            <div class="col-md-6">
+                                <input id="email" type="number" class="form-control" name="phone_number" value="{{ old('phone_number') }}">
+
+                                @if ($errors->has('phone_number'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('phone_number') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        {{-- **************************ADRESS******************************************88 --}}
+                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="email" class="col-md-4 control-label">Address</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="text" class="form-control" name="address" value="{{ old('address') }}">
+
+                                @if ($errors->has('address'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('address') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                      {{-- ****************************** PASSWORD ***************************************** --}}
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
 
@@ -51,11 +79,11 @@
                                 @endif
                             </div>
                         </div>
-
+                      {{-- CONFIRM PASSWORD *************************8888888 --}}
                         <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
                             <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
 
-                            <div class="col-md-6">
+                         <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation">
 
                                 @if ($errors->has('password_confirmation'))
@@ -65,6 +93,7 @@
                                 @endif
                             </div>
                         </div>
+                     {{-- ***********************SUBMIT ******************************8 --}}
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
