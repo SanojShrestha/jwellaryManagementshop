@@ -20,23 +20,24 @@ class loginController extends Controller
 
   public function checkvalidate(Request $request)
   {
-     $this->validate($request, ['username'=>'required|alpha','password'=>'required']);
-     $admindata=Admin::find(1);
-     $hashedPassword=$admindata->password;
-     if (Hash::check($request->password, $hashedPassword)) 
-     {
-       if($admindata->name=$request->username)
-       {
-       $request->session()->put('admin_log',"true");
-       $request->session()->put('username',"$admindata->name");
-       return redirect('dashboard/dashboard');
-      }
-    }
-     else 
-     {
-      $request->session()->flash('failled', 'plz check your username and password');
-      return redirect('adminlogin');
-     }
+      return redirect('dashboard/dashboard');
+//     $this->validate($request, ['username'=>'required|alpha','password'=>'required']);
+//     $admindata=Admin::find(1);
+//     $hashedPassword=$admindata->password;
+//     if (Hash::check($request->password, $hashedPassword))
+//     {
+//       if($admindata->name=$request->username)
+//       {
+//       $request->session()->put('admin_log',"true");
+//       $request->session()->put('username',"$admindata->name");
+//
+//      }
+//    }
+//     else
+//     {
+//      $request->session()->flash('failled', 'plz check your username and password');
+//      return redirect('adminlogin');
+//     }
   }
 
   public function dashboard(Request $request) 

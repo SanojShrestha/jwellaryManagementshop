@@ -18,7 +18,8 @@ class homeController extends Controller
      return view('home/index',compact('productList'));
     }
 
-    public function about(){
+    public function about()
+    {
 
      echo "this is about page";
     }
@@ -33,6 +34,7 @@ class homeController extends Controller
     }
     public function register()
     {
+        
     return view('home/register');
     }
 
