@@ -20,7 +20,9 @@ class loginController extends Controller
 
   public function checkvalidate(Request $request)
   {
-      return redirect('dashboard/dashboard');
+      $request->session()->put('admin_log',"true");
+//       $request->session()->put('username',"$admindata->name");
+        return redirect('dashboard/dashboard');
 //     $this->validate($request, ['username'=>'required|alpha','password'=>'required']);
 //     $admindata=Admin::find(1);
 //     $hashedPassword=$admindata->password;

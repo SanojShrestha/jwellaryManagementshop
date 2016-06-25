@@ -1,139 +1,139 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<title>Sangam jwellary shop</title>
-<link href="{{asset('site/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
-<script src="{{asset('site/js/jquery.min.js')}}"></script>
-<link href="{{asset('site/css/style.css')}}" rel="stylesheet" type="text/css" media="all" />	
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
-<link href="{{asset('site/css/memenu.css')}}" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="{{asset('site/js/memenu.js')}}"></script>
-<script>$(document).ready(function(){$(".memenu").memenu();});</script>
-<script src="{{asset('site/js/simpleCart.min.js')}}"> </script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Sangam jwellary shop</title>
+	<link   href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css"/>
+  {{-- 	<link   href="{{asset('bootstrap/css/bootstrap-theme.min.css')}}" rel="stylesheet" type="text/css" /> --}}
+  <link   href="{{asset('css/sitePageStyle.css')}}" rel="stylesheet" type="text/css" />
+  <script src="{{asset('js/jquery.min.js')}}"> </script>
+  <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"> </script>	
+  <script src="{{asset('js/angular.min.js')}}"> </script>	
+   <script src="{{asset('js/sitePageJavascript.js')}}"> </script>  
+
 </head>
 <body>
-<!--****************************THIS SECTION HEADER OF OUR SITE ********************************************-->
-<div class="header">
-<!-- *********************************THIS SECTION FOR TOP HEADER STYLING ***********************************8 -->
-	<div class="header-top">
-		<div class="container">
-	
-				 <form>
-						<input type="text" value="Search " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-						<input type="submit" value="Go">
-					</form> 
-			<h2 style=" color: white;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">welcome to sangam jwellary shop</h2>
-		
-			<div class="header-left">		
-					<ul>
-						
-					</ul>
-					<div class="cart box_1" style="margin-top:-20px;padding-top:-20px;">
-						<a href="checkout.html">
-						<h3> <div class="total">
-							<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
-							<img src="{{asset('site/images/cart.png') }}" alt=""/></h3>
-						</a>
-						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+  {{-- HEADING-START --}}
+  <section title="heading">
+    <div class="page-header">
+      <div class="row">
+       <div class="col-md-6 col-sm-6 col-xs-6">
+         <div class="logo">
+         <a href="{{ url('/') }}"><h1>SanGam <span>Shop</span></h1></a>
+         </div>
+       </div>
+       <div class="col-md-6 col-sm-6 col-xs-6">
+         <div class="cart-logo">
+           <a href="#"><h1><span class="glyphicon glyphicon-shopping-cart"></span>items</h1></a>
+         </div>
+       </div>
+     </div>
+   </div>
 
-					</div>
-					<div class="clearfix"> </div>
-			</div>
-				<div class="clearfix"> </div>
-		</div>
-		</div>
-		<!-- ********************************* TOP HEADER STYLING ENDS ***********************************8 -->
+   <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
 
-		<!--- THIS SECTION GOGES FOR NAVIGATION  BAR STYLE************************************ -->
-		<div class="container">
-			<div class="head-top">
-				<div class="logo">
-					<a href="index.html"><img src="{{ asset('images/logo.png') }}" alt=""></a>	
-				</div>
-		  <div class=" h_menu4">
-				<ul class="memenu skyblue">
-			  <li class="active grid"><a class="color6" href="{{ url('/') }}">Home</a></li>				
-					<li><a class="color6" href="{{ url('/contact') }}">new Items</a></li>
-					<li><a class="color6" href="{{ url('/contact') }}">category</a></li>
-					<li><a class="color6" href="{{ url('/contact') }}">Conact</a></li>
-					<li><a class="color6" href="{{ url('/contact') }}">services</a></li>
-					<li><a class="color6" href="{{ url('/contact') }}">about us</a></li>
-
-
-   
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Products</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+    {{--   <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input class="form-control" placeholder="Search" type="text">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form> --}}
+            <ul class="nav navbar-nav navbar-right">
+                    <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li><a class="color6" href="{{ url('/login') }}">Login</a></li>
-                        <li><a class="color6" href="{{ url('/register') }}">Register</a></li>
+                        <li><a href="{{ url('/login') }}">Login</a></li>
+                        <li><a href="{{ url('/register') }}">Register</a></li>
                     @else
-                        
-                                <li><a class="color6" href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>  {{ Auth::user()->name }} Logout</a></li>
-                     
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                            </ul>
+                        </li>
                     @endif
-   
-			  </ul> 
-			</div>
-			
-		</div>
-		</div>
-	</div>
+                </ul>
+    </div>
+  </div>
+</nav>
+</section>
+{{-- HEADING-CLOSED --}}
+<section id="contents">
 
-	<!--*************************NavBAR SECTION ENDS ************************************ -->
-   <!--************************ tHIS IS FOR BANNER TEXT IN SLIDER ************************************************* -->
+@yield('content')
 
-   @yield('content')
-	
-<!-- ************************************THIS SECTION IS FOR FOOTER ******************************************** -->
-<div class="footer">
-				<div class="container">
-			<div class="footer-top-at">
-			
-				<div class="col-md-4 amet-sed">
-				<h4>MORE INFO</h4>
-				<ul class="nav-bottom">
-						<li><a href="#">How to order</a></li>
-						<li><a href="#">FAQ</a></li>
-						<li><a href="contact.html">Location</a></li>
-						<li><a href="#">Shipping</a></li>
-						<li><a href="#">Membership</a></li>	
-					</ul>	
-				</div>
-				<div class="col-md-4 amet-sed ">
-				<h4>CONTACT US</h4>
-				
-					<p>
-Contrary to popular belief</p>
-					<p>The standard chunk</p>
-					<p>office:  +12 34 995 0792</p>
-					<ul class="social">
-						<li><a href="#"><i> </i></a></li>						
-						<li><a href="#"><i class="twitter"> </i></a></li>
-						<li><a href="#"><i class="rss"> </i></a></li>
-						<li><a href="#"><i class="gmail"> </i></a></li>
-						
-					</ul>
-				</div>
-				<div class="col-md-4 amet-sed">
-					<h4>Newsletter</h4>
-					<p>Sign Up to get all news update
-and promo</p>
-					<form>
-						<input type="text" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
-						<input type="submit" value="Sign up">
-					</form>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-		<div class="footer-class">
-		<p >© 2015 New store All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
-		</div>
-		</div>
-<!-- **************************************FOOTER SECTION ENDS ************************************* -->
+</section>
+
+
+<section footer>
+<footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6" style="">
+                        <h3>Our Services</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Interior Designs</a></li>
+                            <li><a href="#">Project Management</a></li>
+                            <li><a href="#">House Renovation</a></li>
+                            <li><a href="#">Constructions</a></li>
+                        </ul>                        
+                    </div>
+                     <div class="col-md-6 col-sm-6 ">
+                      <h3>our location</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Interior Designs</a></li>
+                            <li><a href="#">Project Management</a></li>
+                            <li><a href="#">House Renovation</a></li>
+                            <li><a href="#">Constructions</a></li>
+                        </ul
+                    </div>
+                   
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-7 col-md-7">
+                        <ul class="list-inline">
+                            <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Terms &amp; Conditions</a></li>
+                        </ul>   
+                    </div>
+                    <div class="col-sm-5 col-md-5 text-right">
+                        <span>&copy; 2016. All Right Reserved. Bpress</span> 
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+  </section>
+
+
 </body>
 </html>
-			

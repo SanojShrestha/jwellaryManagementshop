@@ -1,31 +1,56 @@
 @extends('home/layout/master')
 @section('content')
+{{-- SLIDER-STATRT --}}
+<section title="slider" id="slider">
+<div class="container-fluid" style="padding:0px;">
+    <br>
+    <div class="fixthis">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
 
-{{-- <div class="banner">
-		<div class="container">
-		
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="img1.jpg" alt="Chania" >
+          </div>
+          
+              <div class="item">
+                <img src="img2.jpg" alt="Flower" >
+              </div>
 
+              <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-			<div  id="top" class="callbacks_container">
-			<ul class="rslides" id="slider">
-			    <li>
-					
-						<div class="banner-text">
-							<h3>Welcome to jwellary managemetn shop</h3>
-						<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor .</p>
-						<a href="single.html">Learn More</a>
-						</div>
-				
-				</li>
-			
-			</ul>
-		</div>
+</section>
+{{-- introduction starts --}}
 
-	</div>
-	</div> --}}
-	<!-- *********************************** BANNER TEXT ENDS HERERE *******************-->
+<section id="intro">
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-lg-6 col-sm-6">
+    </div>
+    <div class="col-md-6 col-lg-6 col-sm-6">
+    </div>
 
-<!--***************************************CONTENT SECTION GOES HERE ***********************************************-->
+  </div>
+</div>
+</section>
 <div class="content">
 	<div class="container">
 	<div class="content-top">

@@ -1,7 +1,7 @@
 @extends('home/layout/master')
 @section('content')
 <div class=" container">
-<div class=" register">
+<div class="jumbotron">
 	<h1>Register</h1>
 		  	  <form> 
 				 <div class="col-md-6 register-top-grid">
@@ -38,8 +38,7 @@
 					 <div class="clearfix"> </div>
 				</form>
 			</div>
-</div>
-<!--//content-->
+	</div>
 			
 
 @stop
