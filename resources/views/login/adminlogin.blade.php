@@ -7,18 +7,16 @@
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-  <script  src="js/angular.min.js"></script>
   <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script  src="js/angular.min.js"></script>
   <style>
-  body{
-  background-color:#263238;
-}
+
     @media only screen and (min-width: 300px)
     {
 
       .modal-header, h4, .close {
-        background-color:#263238;
+        background-color:#222;
         color:white !important;
         text-align: center;
         font-size: 15px;
@@ -194,7 +192,7 @@ input.ng-invalid.ng-dirty{
          </div>
          <!-- form buttons  -->
 
-         <button type="submit" ng-disabled="myForm.$invalid" class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+         <button type="submit" ng-disabled="myForm.$invalid" class="btn btn-default btn-lg btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
        </form>
        <br>
        <!-- forgot password link  -->

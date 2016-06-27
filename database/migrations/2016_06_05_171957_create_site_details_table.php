@@ -14,6 +14,9 @@ class CreateSiteDetailsTable extends Migration
     {
         Schema::create('site_details', function (Blueprint $table) {
             $table->increments('id');
+            $table->string("Address");
+            $table->string("email");
+            $table->string("phone");
             $table->timestamps();
         });
     }

@@ -1,10 +1,10 @@
 
  <html>
-  <link rel="stylesheet" type="text/css" href="{{asset('bootstrap/css/bootstrap.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{asset('bootstrap/css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ asset('css/dasboardstyle.css') }}">
-  <script  src="{{asset('js/angular.min.js') }}"></script>
   <script src="{{asset('js/jquery.min.js') }}"></script>
-  <script src="{{asset('js/bootstrap.min.js') }}"></script>
+  <script src="{{asset('bootstrap/js/bootstrap.min.js') }}"></script>
+    <script  src="{{asset('js/angular.min.js') }}"></script>
   <script type="text/javascript">
     $(document).ready(function () {
       $('.mainMenuItem').click(function () {
@@ -20,7 +20,7 @@
 <body>
   <!-- this section goes for navbar -->
   <section>
-    <nav class="navbar  navbar-static-top" style="background-color:#263238;">
+    <nav class="navbar navbar-inverse  navbar-static-top" >
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -85,9 +85,9 @@
              </li>
             <li class="mainMenuItem pages">
               <a href="#"> <i class="fa fa-file-o"></i> &nbsp;
-               Orders</a>
+              contactDetail</a>
                <ul class="subMenu">
-                <li><a href="{{url('customer') }} ">view Orders</a></li>
+                <li><a href="{{url('contactDetails') }} ">viewDetail</a></li>
                </ul>
              </li>
             <li class="mainMenuItem pages">
@@ -95,16 +95,6 @@
                Orders</a>
                <ul class="subMenu">
                 <li><a href="{{url('customer') }} ">view Orders</a></li>
-               </ul>
-             </li>
-             <!-- for users -->
-             <li class="mainMenuItem users">
-              <a href="#"><i class="fa fa-users"></i>&nbsp;
-               site Setting</a>
-               <ul class="subMenu">
-                 <li><a href="{{url('customer') }} ">view Orders</a></li>
-                   <li><a href="{{url('customer') }} ">view Orders</a></li>
-                     <li><a href="{{url('customer') }} ">view Orders</a></li>
                </ul>
              </li>
             
