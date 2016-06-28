@@ -2,7 +2,7 @@
 @section('content')
 {{-- SLIDER-STATRT --}}
 <section title="slider" id="slider">
-<div class="container-fluid" style="padding:0px;">
+  <div class="container-fluid" style="padding:0px;">
     <br>
     <div class="fixthis">
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -20,63 +20,60 @@
             <img src="img1.jpg" alt="Chania" >
           </div>
           
-              <div class="item">
-                <img src="img2.jpg" alt="Flower" >
-              </div>
-
-              <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
+          <div class="item">
+            <img src="img2.jpg" alt="Flower" >
           </div>
+
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
       </div>
+    </div>
+  </div>
 
 </section>
-{{-- introduction starts --}}
-{{-- 
 <section id="intro">
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 col-lg-6 col-sm-6">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-6 col-sm-6">
+      </div>
+      <div class="col-md-6 col-lg-6 col-sm-6">
+      </div>
+
     </div>
-    <div class="col-md-6 col-lg-6 col-sm-6">
+  </div>
+</section>
+<section>
+  <div class="jumbotron">
+	<div class="container">
+   <div class="content-top">
+    <h1>Our Latest jwellary Items</h1>
+    <hr>
+    <div class="row">
+     @foreach($productList as $product)
+     <div class="col-md-4 col-sm-6  col-xs-6 col-lg-4" style="padding:30px;text-align: center;">
+       <a href="{{ url('singleProduct',['id'=>$product->id]) }} "  class="thumbnail"><img  class="img-responsive" src="{{ asset('uploads/product_images')."/".$product->product_firstImage }}" style="height:160px;width:100%;" alt="">
+       <h3>{{ $product->product_name}}</h3>
+        <br>
+      <button class="btn btn-primary btn-lg">Add to  Cart</button> 
+        </a>
+    
+      </div>
+
+      @endforeach
     </div>
 
   </div>
+
 </div>
+</div>
+
 </section>
-<div class="content">
-	<div class="container">
-	<div class="content-top">
-		<h1>NEW RELEASED</h1>
-		<div class="grid-in">
-		 @foreach($productList as $product)
-			<div class="col-md-4 grid-top" style="padding:30px;
-    text-align: center;">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img  class="img-responsive" src="{{ asset('uploads/product_images')."/".$product->product_firstImage }}" style="height:350px" alt="">
-							<div class="b-wrapper">
-									<h3 class="b-animate b-from-left    b-delay03 ">
-										<span>{{ $product->product_name}} </span>	
-									</h3>
-								</div>
-				</a>
-		
-
-			<p><a href="/">{{ $product->product_note }}</a></p>
-			</div>
-		
-		      @endforeach
-					<div class="clearfix"> </div>
-		</div>
-	
-	</div>
-
-</div> --}}
 
 @stop

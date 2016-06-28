@@ -19,7 +19,6 @@ class siteDetailController extends Controller
        $siteInfo=new siteDetail();
        $contactDetails=$siteInfo::first();
        	return view('Dashboard/ContactDetail/contactDetails',compact('contactDetails'));
-
  
     }
 
@@ -45,7 +44,6 @@ class siteDetailController extends Controller
         
     }
 
-    
     public function show($id)
     {
        

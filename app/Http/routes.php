@@ -19,17 +19,19 @@ Route::get('userProfile/changePassword/{id}','userProfileController@changePasswo
 
 Route::Post('userProfile/updatePassword/{id}','userProfileController@updatePassword');
 
-Route::get('about','homeController@about');
-
 Route::get('contact','homeController@contact');
 
 Route::get('showProducts','homeController@showProducts');
 
 Route::get('register','homeController@register');
 
-Route::get('single','homeController@single');
+Route::get('singleProduct/{id}','homeController@singleProduct');
+
+Route::get('productByCategories/{category_name}','homeController@productByCategories');
 
 Route::post('checkforExitingEmail','homeController@checkforExitingEmail');
+
+Route::get('userFeedback','peopleFeedbackController@index');
 
 Route::get('forgotPassword','loginController@forgotPassword');
 

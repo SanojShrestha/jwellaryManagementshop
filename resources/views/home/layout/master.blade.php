@@ -55,12 +55,11 @@
               ?>
               @if(count($categoryList))
               @foreach($categoryList as $category)
-              <li><a href="#">{{$category->category_name}}</a></li>
+              <li><a  href="{{url('productByCategories')."/".$category->category_name }} ">{{$category->category_name}}</a></li>
               @endforeach
               @endif
             </ul>
           </li>
-          <li><a href="{{url('about')}}">about us</a></li>
           <li><a href="{{url('contact')}}">contact us</a></li>
 
         </ul>

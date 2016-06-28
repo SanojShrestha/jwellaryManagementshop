@@ -10,6 +10,7 @@ return array(
     'CreateContactUsListsTable' => $baseDir . '/database/migrations/2016_06_27_112647_create_contact_us_lists_table.php',
     'CreateCustomersTable' => $baseDir . '/database/migrations/2016_06_04_073138_create_customers_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+    'CreatePeopleFeedbacksTable' => $baseDir . '/database/migrations/2016_06_28_133904_create_people_feedbacks_table.php',
     'CreateProductCategoriesTable' => $baseDir . '/database/migrations/2016_05_28_153248_create_product_categories_table.php',
     'CreateProductsTable' => $baseDir . '/database/migrations/2016_06_03_163758_create_products_table.php',
     'CreateSiteDetailsTable' => $baseDir . '/database/migrations/2016_06_05_171957_create_site_details_table.php',
@@ -520,4 +521,8 @@ return array(
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
+    'adminTableSeeder' => $baseDir . '/database/seeds/adminTableSeeder.php',
+    'categoryTableSeeder' => $baseDir . '/database/seeds/categoryTableSeeder.php',
+    'siteDetailTableSeeder' => $baseDir . '/database/seeds/siteDetailTableSeeder.php',
+    'userTableSeeder' => $baseDir . '/database/seeds/userTableSeeder.php',
 );

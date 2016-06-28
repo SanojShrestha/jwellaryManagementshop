@@ -97,6 +97,13 @@
                 <li><a href="{{url('customer') }} ">view Orders</a></li>
                </ul>
              </li>
+           <li class="mainMenuItem pages">
+              <a href="#"> <i class="fa fa-file-o"></i> &nbsp;
+               People feedback</a>
+               <ul class="subMenu">
+                <li><a href="{{url('userFeedback') }} ">view feedback</a></li>
+               </ul>
+             </li>
             
           </ul>
         </div>

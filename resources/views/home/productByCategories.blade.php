@@ -4,7 +4,7 @@
   <div class="jumbotron">
 	<div class="container">
    <div class="content-top">
-    <h1>Our Latest jwellary Items</h1>
+    <h1>prduct by  {{ $category_name }}</h1>
     <hr>
     <div class="row">
      @foreach($productList as $product)
