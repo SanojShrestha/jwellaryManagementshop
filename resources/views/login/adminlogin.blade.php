@@ -7,138 +7,10 @@
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/adminLogin.css">
   <script src="js/jquery.min.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
   <script  src="js/angular.min.js"></script>
-  <style>
-
-    @media only screen and (min-width: 300px)
-    {
-
-      .modal-header, h4, .close {
-        background-color:#222;
-        color:white !important;
-        text-align: center;
-        font-size: 15px;
-      }
-      .modal-footer {
-        background-color: #f9f9f9;
-      }
-      .modal-dialog {
-        width: 100%;
-      }
-      p a{
-
-       font-size: 12px;
-     }
-
-   }
-   @media only screen and (min-width: 360px)
-   {
-
-    .modal-header, h4, .close {
-      font-size: 15px;
-    }
-    .modal-footer {
-      background-color: #f9f9f9;
-    }
-    .modal-dialog {
-      width: 90%;
-    }
-    p a{
-
-     font-size: 14px;
-   }
-
- }
- @media only screen and (min-width: 640px)
- {
-
-  .modal-header, h4, .close {
-    font-size: 30px;
-  }
-  .modal-footer {
-    background-color: #f9f9f9;
-  }
-  .modal-dialog {
-    margin:10% 10%;
-    width: 65%;
-  }
-  p a{
-
-   font-size: 14px;
- }
-
-}
-@media only screen and (min-width: 768px)
-{
-
-  .modal-header, h4, .close {
-    font-size: 30px;
-  }
-  .modal-footer {
-    background-color: #f9f9f9;
-  }
-  .modal-dialog {
-    margin:10% 10%;
-    width: 60%;
-  }
-
-}
-
-@media only screen and (min-width: 990px)
-{
- 
-.modal-footer {
-  background-color: #f9f9f9;
-}
-.modal-dialog {
-  margin:10% 22%;
-  width: 50%;
-}
-
-}
-
-@media only screen and (min-width: 1200px) 
-{
- .modal-header, h4, .close {
-
-  font-size: 30px;
-}
-.modal-footer {
-  background-color: #f9f9f9;
-}
-.modal-dialog {
-  margin: 10% 28%;
-  width: 40%;
-}
-
-}
-/* Large screens ----------- */
-@media only screen and (min-width: 1500px) 
-{
- .modal-header, h4, .close {
-
-  font-size: 30px;
-}
-.modal-footer {
-  background-color: #f9f9f9;
-}
-.modal-dialog {
-  margin: 10% 27%;
-  width: 45%;
-}
-}
-
-input.ng-valid.ng-dirty{
-  border:1px solid lightblue;
-}
-input.ng-invalid.ng-dirty{
-  border: 1px solid red;
-}
-
-</style>
-
 <div class="container" >
   
   <div class="container" ng-app="login" ng-controller="loginCtrl">
@@ -197,10 +69,6 @@ input.ng-invalid.ng-dirty{
        <br>
        <!-- forgot password link  -->
      </div>
-     <!-- modal footer starts -->
-     <div class="modal-footer">
-     <p class="pull-right"> <a href="{{ url('forgotPassword') }}">Forgot Password</a></p>
-         </div>
      </div>
      <!-- modal footer closed -->
    </div> <!-- modal content closed -->

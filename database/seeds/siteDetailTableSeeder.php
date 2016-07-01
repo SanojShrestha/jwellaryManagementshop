@@ -13,7 +13,7 @@ class siteDetailTableSeeder extends Seeder
      */
     public function run()
     {    
-    	DB::table('site_details')->delete();
+        siteDetail::truncate();
         $siteDetail=new siteDetail();
         $siteDetail->Address="bhartpur13 ,rambag chitwan";
         $siteDetail->email="jonasahtserhs@gmail";

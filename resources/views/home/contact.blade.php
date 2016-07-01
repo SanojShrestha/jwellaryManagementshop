@@ -12,7 +12,6 @@
 
 </style>
 <script>
-	var app=angular.module("formValidation",[]);
 	app.controller('contactControlller',function($scope,$http){
 		$scope.name="";
 		$scope.comment="";
@@ -38,11 +37,10 @@
 				$scope.message("sorry error occur while doing!!!");
 			})
 		};
-
 	})
 </script>
 
-<div class='jumbotron' ng-app="formValidation" ng-controller="contactControlller">
+<div class='jumbotron'   ng-controller="contactControlller">
 	<div class="container">
 	<div class="alert alert-success fade in" ng-show="showMessage">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>

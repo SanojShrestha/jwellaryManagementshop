@@ -8,13 +8,20 @@ use App\Http\Requests;
 use App\User;
 use Illuminate\Support\Facades\Session;
 use Hash;
-
+use App\order;
 class userProfileController extends Controller
 {
 	public function __construct(){
 
 		$this->middleware('auth');
 	}
+    public function myOrders()
+    {   $order=new order();
+        $order1=new order();
+        $myOrders=$order::where('order_user_id',Auth::user()->id)->paginate(9);
+         $totalPrice=$order1::where('order_user_id',Auth::user()->id)->sum('product_price');
+       return view("userProfile/myOrders",compact('myOrders','totalPrice'));
+    }
 	public function index()
 	{ 
 		$users=new User();
@@ -23,44 +30,7 @@ class userProfileController extends Controller
 		return view("userProfile/index",compact('userInfo'));
 	}
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
     	$user=new User();
@@ -70,13 +40,7 @@ class userProfileController extends Controller
 
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
     	
@@ -92,20 +56,16 @@ class userProfileController extends Controller
     	$user->address=$request->address;
     	$user->phone_number=$request->phone_number;
     	$user->save();
-    	Session::flash("success","your changes updated succssfully");
     	return redirect('userProfile');
 
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-        //
+        $order=new order();
+        $myOrders=$order::find($id)->delete();
+       Session::flash("success","your changes updated succssfully");
+       return redirect('myOrders');
     }
     public function changePassword($id)
     {   $userId=$id;
@@ -133,13 +93,5 @@ class userProfileController extends Controller
     		return back();
     	}
     }
-    // public function viewOrders()
-    // {
-
-
-    // }
-    // public function deleteOrders()
-    // {
-
-    // }
+    
 }

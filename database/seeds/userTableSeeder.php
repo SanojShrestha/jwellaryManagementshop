@@ -12,7 +12,7 @@ class userTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->delete();
+        User::truncate();
         $user=new User();
         $user->name="sanoj";
         $user->email="sanojsth42@gmail.com";

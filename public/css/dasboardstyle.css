@@ -1,32 +1,39 @@
-.navbar-inverse .navbar-nav > li > a{
+.navbar-default .navbar-nav > li > a{
   font-size:17.5px;
 }
 .dropdown-menu > li > a {
   font-size:16px;
   }
 
+.navbar{
+  margin-bottom: 0px;
+}
+.form-control{
+    height:40px;
+    font-size:16px;
+  }
 table{
   background-color:#fff;
 }
 .rightside{
 
   position: relative;
-  top:-20px;
   background-color:#fff;
   height:100%;
-  overflow:auto;
+  overflow:scroll;
+    margin-top:55px;
 
 }
 .leftside{
 
   position: relative;
-  top:-20px;
-  background-color:#222;
+  background-color:#375a7f;
   height:100%;
-  overflow:auto;
+  overflow:scroll;
   color:#fff;
   border-right:2px solid #546E7A;
   overflow: auto;
+  margin-top:52px;
 }
  ul.subMenu
   {
@@ -71,7 +78,6 @@ td {
   .leftside{
 
     position: relative;
-    top:50px;
       overflow:auto;
   }
 

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateContactUsListsTable extends Migration
+class CreateCartsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,13 @@ class CreateContactUsListsTable extends Migration
      */
     public function up()
     {
-        Schema::create('contact_us_lists', function (Blueprint $table) {
+        Schema::create('carts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string("name");
-            $table->string("email");
-            $table->text("comment");
+            $table->string("product_name");
+            $table->string("product_category");
+            $table->string("ordered_user");
+            $table->string('order_user_id');
+            $table->string('product_price');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreateContactUsListsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('contact_us_lists');
+        Schema::drop('carts');
     }
 }

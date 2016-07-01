@@ -20,7 +20,7 @@
 <body>
   <!-- this section goes for navbar -->
   <section>
-     <nav class="navbar  navbar-inverse navbar-static-top">
+     <nav class="navbar  navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
 
@@ -35,6 +35,9 @@
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('userProfile') }}">
                  welcome to UserProfile section
+                </a>
+                <a  style="border:1px solid #ccc;margin-left:10px;font-weight:bold;background:#222;color:#fff" class="navbar-brand" href="{{ url('/') }}">
+                 go home Page
                 </a>
             </div>
 
@@ -77,7 +80,7 @@
               <a href="#"><i class="fa fa-tachometer"></i> &nbsp;
                your orders </a>
                <ul class="subMenu " >                            
-               <li><a href="#">view  orders</a></li>
+               <li><a href="{{ url('myOrders') }}">view  orders</a></li>
                </ul>
              </li>
               <li class="mainMenuItem events">
@@ -94,7 +97,6 @@
     <!-- this section for rightside -->
     <div class=" col-md-10 col-sm-9 col-lg-10 col-xs-8 rightside">
       <section style="padding:20px">
-     <h1>welcome {{ Auth::user()->name }}</h1>
 
      @yield('content')
       </section>

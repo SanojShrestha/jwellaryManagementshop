@@ -1,5 +1,6 @@
 @extends('userProfile.master')
 @section('content')
+  <h1>welcome {{ Auth::user()->name }}</h1>
 @if(Session::has('success'))
 <div class="alert alert-success ">
   <h4>{{ Session::get('success') }}</h4>

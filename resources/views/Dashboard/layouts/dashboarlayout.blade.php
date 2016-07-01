@@ -20,7 +20,7 @@
 <body>
   <!-- this section goes for navbar -->
   <section>
-    <nav class="navbar navbar-inverse  navbar-static-top" >
+    <nav class="navbar navbar-default navbar-fixed-top" >
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -94,7 +94,7 @@
               <a href="#"> <i class="fa fa-file-o"></i> &nbsp;
                Orders</a>
                <ul class="subMenu">
-                <li><a href="{{url('customer') }} ">view Orders</a></li>
+                <li><a href="{{url('userOrders') }} ">view Orders</a></li>
                </ul>
              </li>
            <li class="mainMenuItem pages">

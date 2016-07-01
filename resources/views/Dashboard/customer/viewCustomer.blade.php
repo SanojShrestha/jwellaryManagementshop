@@ -35,10 +35,10 @@
 			<td width="220">
 				<a href="customer/{{$customer->id }}/edit"><button type="button" class="btn btn-primary">edit</button></a>
 				<a style="display:inline-block;">
-					<form  method="post" action="customer/{{ $customer->id }}">
+				<form  method="post" action="customer/{{ $customer->id }}">
 						{!! csrf_field()!!}
 						{!! method_field('delete')!!}
-						<input type="submit" value="delete" class="btn btn-danger delete">
+			<input type="submit" value="delete" class="btn btn-danger delete">
 					</form>
 				</a>
 			</td>

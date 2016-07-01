@@ -3,13 +3,13 @@
 contctDetail/Add
 @stop
 @section('contents')
+<h2>you site Contact Details / &nbsp; &nbsp; &nbsp; <a href="contactDetails/{{$contactDetails->id }}/edit">update Contact details</a></h2>
+<hr>
 @if(Session::has('success'))
 <div class="alert alert-success ">
   <h4>{{ Session::get('success') }}</h4>
 </div>
 @endif
-<h2>you site Contact Details / &nbsp; &nbsp; &nbsp; <a href="contactDetails/{{$contactDetails->id }}/edit">update Contact details</a></h2>
-<hr> 
     <div class="table-responsive">          
   <table class="table table-hover table-bordered table-striped">
 
@@ -28,5 +28,5 @@ contctDetail/Add
       </tr>
   </table>
   </div>
-  </div>
- @stop;
+@stop
+

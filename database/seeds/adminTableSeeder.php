@@ -12,11 +12,11 @@ class adminTableSeeder extends Seeder
      */
     public function run()
     {
-    	DB::table('admins')->delete();
-       $admin=new admin();
-       $admin->name="sanoj";
-       $admin->password=bcrypt('2nr5g6');
-       $admin->save();
+     admin::truncate();
+     $admin=new admin();
+     $admin->name="sanoj";
+     $admin->password=bcrypt('2nr5g6');
+     $admin->save();
      
-    }
-}
+   }
+ }

@@ -20,5 +20,9 @@ class DatabaseSeeder extends Seeder
     	$this->command->info("category  table is seeded");
     	$this->call(siteDetailTableSeeder::class);
     	$this->command->info("siteDetail  table is seeded");
+        $this->call(productTableSeeder::class);
+        $this->command->info("product table is seeded");
+        $this->call(ContactUsListTableSeeder::class);
+        $this->command->info("userFeedback table is seeded");
     }
 }

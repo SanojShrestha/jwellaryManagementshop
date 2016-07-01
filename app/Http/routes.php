@@ -15,9 +15,13 @@
 
 Route::get('/','homeController@index');
 
+Route::get('myOrders','userProfileController@myOrders');
+
 Route::get('userProfile/changePassword/{id}','userProfileController@changePassword');
 
 Route::Post('userProfile/updatePassword/{id}','userProfileController@updatePassword');
+
+Route::resource('userProfile','userProfileController');
 
 Route::get('contact','homeController@contact');
 
@@ -33,6 +37,8 @@ Route::post('checkforExitingEmail','homeController@checkforExitingEmail');
 
 Route::get('userFeedback','peopleFeedbackController@index');
 
+Route::post('DeletePeopleFeedback/{id}','peopleFeedbackController@DeletePeopleFeedback');
+
 Route::get('forgotPassword','loginController@forgotPassword');
 
 Route::get('adminlogin','loginController@index');
@@ -41,7 +47,7 @@ Route::get('adminlogout','loginController@logout');
 
 Route::post('checkvalidate','loginController@checkvalidate');
 
-Route::get('dashboard/dashboard','loginController@dashboard');
+Route::get('dashboard','loginController@dashboard');
 
 Route::resource('category','categoryController');
 
@@ -50,6 +56,16 @@ Route::resource('product','productsController');
 Route::resource('user','customerController');
 
 Route::resource('contactDetails','siteDetailController');
+
+Route::resource('userOrders','userOrdersController');
+
+Route::post('add_to_cart','homeController@add_to_cart');
+
+Route::post('remove_from_cart','homeController@remove_from_cart');
+
+Route::get('reviewAndShop','homeController@reviewAndShop');
+
+Route::post('order','homeController@order');
 
 Route::auth();
 Route::get('/home', 'HomeController@index');

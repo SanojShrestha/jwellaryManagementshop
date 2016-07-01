@@ -17,9 +17,11 @@ class CreateProductsTable extends Migration
             $table->string('product_name')->unique();
             $table->integer('product_quantity');
             $table->float('product_weight');
+            $table->float('product_price');
             $table->string('product_firstImage');
             $table->string('product_secondImage');
             $table->string('product_note');
+            $table->string('order_user_id');
             $table->integer('category_id');
             $table->string('category_name');
             $table->timestamps();
